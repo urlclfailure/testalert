@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+
+* {
+      box-sizing: border-box;
+    }
+        body {
+          margin: 0;
+          height: 100vh;
+          display: flex;
+          justify-content: center; /* center horizontally */
+          align-items: center;     /* center vertically */
+          background-color: #f18ec3;
+          font-family: Helvetica, sans-serif;
+          padding: 1rem;
+        }
+
+        img {
+      width: 10vw; /* Adjust size as needed */
+      max-width: 150px
+      height: auto;
+      margin-bottom: 1.5rem;
+    }
+        .container {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;     
+      text-align: center;
+    }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+          cursor: pointer;
+      border-radius: 0.5rem;
+          font-family: 'Pixelify Sans', sans-serif
+        }
+
+        button:hover {
+      background-color: #f18ec3;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.pinimg.com/736x/01/dc/5b/01dc5b8d4893340cceb753c18f4846b3.jpg" alt="minjiii" width="100">
+    <button onclick="showAlert()">COBA PENCET AKUUU :P</button>
+    <p>pencet aja plisss</p>
+        </div>
+    <script>
+      function showAlert() {
+        alert("yang mencet kaya monyet");
+      }
+      </script>
+</body>
+</html>
