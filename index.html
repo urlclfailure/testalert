@@ -60,8 +60,17 @@
         </div>
     <script>
       function showAlert() {
-        alert("yang mencet kaya monyet");
+      alert("yang mencet kaya monyet");
+      
+      // After the alert is closed, you can show a confirmation box
+      var userConfirmed = confirm("kamu setuju?");
+      
+      if (userConfirmed) {
+        alert("yahahaha monyet");
+      } else {
+        alert("boong bgt");
       }
+    }
       </script>
 </body>
 </html>
