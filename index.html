@@ -22,7 +22,7 @@
         }
 
         img {
-      width: 30vw; /* Adjust size as needed */
+      width: 10vw; /* Adjust size as needed */
       max-width: 150px
       height: auto;
       margin-bottom: 1.5rem;
@@ -49,6 +49,13 @@
 
     button:active {
       transform: scale(0.95);
+    }
+
+@media (max-width: 480px) {
+      img {
+        width: 60vw; /* 60% of the viewport width on mobile */
+        max-width: 150px; /* Max size on very small screens */
+      }
     }
       </style>
 </head>
