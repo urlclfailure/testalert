@@ -14,15 +14,15 @@
           margin: 0;
           height: 100vh;
           display: flex;
-          justify-content: center; 
-          align-items: center;     
+          justify-content: center; /* center horizontally */
+          align-items: center;     /* center vertically */
           background-color: #f18ec3;
           font-family: Helvetica, sans-serif;
           padding: 1rem;
         }
 
         img {
-      width: 20vw; 
+      width: 20vw; /* Adjust size as needed */
       max-width: 150px
       height: auto;
       margin-bottom: 1.5rem;
@@ -91,7 +91,7 @@
       height: 0;
     }
 
-      .slider {
+    .slider {
       position: absolute;
       cursor: pointer;
       top: 0;
@@ -127,14 +127,14 @@
     input:checked + .slider:before {
   transform: translateX(26px);
   content: "☾";
-  background-color: #333;   
-  color: white;             
-  border: 1px; 
+  background-color: #333;   /* circle background turns black */
+  color: white;             /* symbol inside stays white */
+  border: 1px;  /* optional: makes it pop */
     }
 @media (max-width: 480px) {
       img {
-        width: 60vw; 
-        max-width: 150px; 
+        width: 60vw; /* 60% of the viewport width on mobile */
+        max-width: 150px; /* Max size on very small screens */
       }
     }
       </style>
