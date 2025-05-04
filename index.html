@@ -14,15 +14,15 @@
           margin: 0;
           height: 100vh;
           display: flex;
-          justify-content: center; /* center horizontally */
-          align-items: center;     /* center vertically */
+          justify-content: center; 
+          align-items: center;     
           background-color: #f18ec3;
           font-family: Helvetica, sans-serif;
           padding: 1rem;
         }
 
         img {
-      width: 20vw; /* Adjust size as needed */
+      width: 20vw; 
       max-width: 150px
       height: auto;
       margin-bottom: 1.5rem;
@@ -32,6 +32,7 @@
       flex-direction: column; 
       align-items: center;     
       text-align: center;
+      transition: color 0.5s ease;
     }
 
         button {
@@ -39,31 +40,116 @@
             font-size: 1rem;
           cursor: pointer;
       border-radius: 0.5rem;
-          font-family: 'Pixelify Sans', sans-serif
+          font-family: 'Pixelify Sans', sans-serif; 
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          margin-bottom: 1rem;
         }
 
         button:hover {
       background-color: #f18ec3;
+      border-color: #c7ff4d;
       transform: scale(1.05);
+      color: #c7ff4d
     }
 
     button:active {
       transform: scale(0.95);
     }
 
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+      border: none;
+    }
+
+    .dark-mode button {
+      background-color: #333;
+      color: white;
+      border: none;
+    }
+
+    .dark-mode button:hover {
+      background-color: #444;
+    }
+
+    .toggle-switch {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #797979;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "☼";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      color: black;
+      text-align: center;
+      line-height: 26px;
+      font-size: 16px;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #4CAF50;
+      color: #333;
+    }
+
+    input:checked + .slider:before {
+  transform: translateX(26px);
+  content: "☾";
+  background-color: #333;   
+  color: white;             
+  border: 1px; 
+    }
 @media (max-width: 480px) {
       img {
-        width: 60vw; /* 60% of the viewport width on mobile */
-        max-width: 150px; /* Max size on very small screens */
+        width: 60vw; 
+        max-width: 150px; 
       }
     }
       </style>
 </head>
 <body>
+    <div class="toggle-switch">
+        <label class="switch">
+          <input type="checkbox" id="darkToggle" onchange="toggleDarkMode()">
+          <span class="slider"></span>
+        </label>
+      </div>
+
     <div class="container">
-        <img src="https://i.pinimg.com/736x/01/dc/5b/01dc5b8d4893340cceb753c18f4846b3.jpg" alt="minjiii" width="150">
-    <button onclick="showAlert()">COBA PENCET AKUUU :P</button>
-    <p>pencet aja plisss</p>
+        <img src="WhatsApp Video 2025-05-03 at 23.49.36_4fa66f2d.gif" alt="nunjuk bawah" width="150">
+    <button onclick="showAlert()">pencet gw bang</button>
         </div>
     <script>
       function showAlert() {
@@ -73,11 +159,23 @@
       var userConfirmed = confirm("kamu setuju?");
       
       if (userConfirmed) {
-        alert("yahahaha monyet");
+        alert("yahahahah monyet");
       } else {
-        alert("boong bgt");
+        var userconfirmsagain = confirm("yang bener?");
+
+      if(userconfirmsagain) {
+        alert("yahahahah monyet");
+      } else { 
+      alert("boong banget");
       }
     }
+      }
+      function toggleDarkMode() {
+      const body = document.body;
+      const isChecked = document.getElementById('darkToggle').checked;
+      body.classList.toggle('dark-mode', isChecked);
+    }
+
       </script>
 </body>
 </html>
